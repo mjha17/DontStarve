@@ -25,11 +25,12 @@ public class CalendarActivity extends AppCompatActivity {
 
     }
     private void toDateView(Date date){
-        //Switching between daily view and calendar view.
+
     }
     private void toMainScreen(){
         Intent intent = new Intent(CalendarActivity.this, MainActivity.class);
-        CalendarActivity.this.startActivity(intent);
+        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivityIfNeeded(intent, 0);
     }
 
 }
