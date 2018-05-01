@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements AsyncResponse {
     }
 
     @Override
-    public void asyncResponce(Bitmap bitmap, Int id) {
+    public void asyncResponse(Bitmap bitmap, int id) {
         //set list item based on response id
     }
 }
