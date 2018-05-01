@@ -26,11 +26,9 @@ public class SearchActivity extends AppCompatActivity {
 
     private void toCaldender(RecipeListItem recipe){
 
-
     }
 
     private void toMainScreen(){
-
 
     }
 }
