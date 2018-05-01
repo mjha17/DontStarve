@@ -16,7 +16,7 @@ public class URLImageLoader extends AsyncTask<URL, Integer, Bitmap> {
 
     private int id;
     private BitmapFactory bf = new BitmapFactory();
-    private AsyncResponce responce;
+    private AsyncResponse responce;
 
     private URLImageLoader(){}
 
@@ -43,7 +43,7 @@ public class URLImageLoader extends AsyncTask<URL, Integer, Bitmap> {
     protected void onPostExecute(Bitmap bitmap) {
         super.onPostExecute(bitmap);
 
-        responce.asyncResponce(bitmap, id);
+        responce.asyncResponse(bitmap, id);
 
     }
 }
