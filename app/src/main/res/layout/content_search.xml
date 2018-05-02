@@ -36,11 +36,13 @@
             android:id="@+id/search_filter_ImageButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
-            android:padding="12dp"
+            android:layout_weight="1"
             android:layout_gravity="center_vertical"
 
-            android:layout_weight="1"
+            android:padding="12dp"
+
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@android:color/white"
             android:src="@drawable/ic_filter_list_black_24dp"
         />
     </LinearLayout>
