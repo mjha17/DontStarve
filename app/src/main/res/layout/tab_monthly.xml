@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@color/backgroundPrimaryColor"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/chosenDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="Choose your Date"
+        android:textSize="23sp"
+        android:textColor="@color/primaryTextColor"/>
+
+        <CalendarView
+            android:id="@+id/chosenMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="#FFF"
+            android:focusedMonthDateColor="@color/colorPrimary">
+
+        </CalendarView>
+
+</LinearLayout>
