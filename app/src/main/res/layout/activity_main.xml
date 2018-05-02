@@ -1,111 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="MainActivity"
-android:orientation="vertical">
-
-<android.support.design.widget.AppBarLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/AppTheme.AppBarOverlay">
+    android:layout_height="match_parent"
+    tools:context="MainActivity"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_vertical"
-            android:text="Leftovers"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:text="@string/leftovers"
+                android:textColor="@color/bigTextColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/main_calendar_ImageButton"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:layout_weight="10"
+                android:src="@drawable/ic_date_range_black_32dp"
+                android:tint="@color/bigTextColor"
+                />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/main_inputIngredient_EditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+
+            android:inputType="text"
+
+            android:backgroundTint="@color/secondaryTextColor"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textColor="@color/primaryTextColor"
+
+            android:layout_weight="7">
+        </EditText>
 
         <ImageButton
-            android:layout_width="wrap_content"
+            android:id="@+id/main_addIngredient_ImageButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginRight="15dp"
-            android:background="transparent"
-            android:layout_weight="10"
-            android:src="@drawable/ic_date_range_black_32dp"
-            android:tint="@android:color/white"/>
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
 
-    </android.support.v7.widget.Toolbar>
+            android:padding="12dp"
 
-</android.support.design.widget.AppBarLayout>
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_add_black_24dp" />
+    </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
 
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="6"/>
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="6"
-        android:ems="10"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:background="@color/secondaryTextColor"
+            android:layout_height="1dp"/>
 
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="6"/>
 
-    <ImageButton
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="5"
-        android:background="@color/colorPrimaryDark"
-        android:src="@drawable/ic_add_black_24dp"
-        android:tint="@android:color/white"
-        android:textColor="@android:color/white"
-        android:layout_marginRight="10dp"/>
+    </LinearLayout>
 
+    <View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/secondaryTextColor"
+        android:layout_height="1dp">
+    </View>
 
-</LinearLayout>
-
-<ListView
-    android:layout_width="wrap_content"
-    android:layout_height="188dp">
-</ListView>
-<view
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="1dp">
-
-</view>
-<ListView
-    android:layout_marginTop="10dp"
-    android:layout_width="wrap_content"
-    android:layout_height="188dp">
-</ListView>
-
-<view
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_width="match_parent"
-    android:layout_height="1dp">
-
-</view>
-
-<Button
-    android:layout_marginRight="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginTop="10dp"
-    android:background="#57585F"
-    android:id="@+id/button3"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textColor="@android:color/white"
-    android:text="Search" />
+    <Button
+        android:id="@+id/main_search_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textColor="@color/bigTextColor"
+        android:textSize="24sp" />
 
 </LinearLayout>

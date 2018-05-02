@@ -12,9 +12,14 @@ import android.widget.TextView;
 
 public class searchResultAdapter extends BaseAdapter {
 
-    RecipeListItem[] recipes;
-    Context ctx;
-    LayoutInflater inflater;
+    //List of reciepes to fill the ListView with
+    private RecipeListItem[] recipes;
+
+    //Context from the ListViews origin
+    private Context ctx;
+
+    //Inflater - Used to inflate list layout later
+    private LayoutInflater inflater;
 
     searchResultAdapter(Context ctx, RecipeListItem[] recipes){
         this.ctx = ctx;
@@ -43,21 +48,26 @@ public class searchResultAdapter extends BaseAdapter {
         View v = view;
 
         if(v == null)
+            //Inflates the list layout
             v = inflater.inflate(R.layout.search_listitem, null);
 
+        //Initiates 'rli' - Stores the RecipeListItem currently being inflated
         RecipeListItem rli = recipes[i];
 
-        TextView headline = (TextView) v.findViewById(R.id.searchListItem_headline_TextView);
-        TextView description = (TextView) v.findViewById(R.id.searchListItem_description_TextView);
+        //Getting components from the list layout
+        TextView headline = v.findViewById(R.id.searchListItem_headline_TextView);
+        TextView description = v.findViewById(R.id.searchListItem_description_TextView);
 
-        ImageView img = (ImageView) v.findViewById(R.id.searchListItem_image_ImageView);
-        ImageView matchIndicator = (ImageView) v.findViewById(R.id.searchListItem_matchIndicator_ImageView);
+        ImageView img = v.findViewById(R.id.searchListItem_image_ImageView);
+        ImageView matchIndicator = v.findViewById(R.id.searchListItem_matchIndicator_ImageView);
 
-        ImageButton calendar = (ImageButton) v.findViewById(R.id.searchListItem_calendar_ImageButton);
+        ImageButton calendar = v.findViewById(R.id.searchListItem_calendar_ImageButton);
 
+        //Sets headline and descrition of the current list item
         headline.setText(rli.name);
         description.setText(rli.desc);
 
+        //Sets the Match Indicator of the current list item
         switch (rli.compatibility){
 
             case 1:
@@ -71,6 +81,7 @@ public class searchResultAdapter extends BaseAdapter {
                 break;
         }
 
+        //Returns the current list item. to be put in the ListView
         return v;
     }
 }

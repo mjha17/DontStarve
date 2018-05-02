@@ -60,7 +60,7 @@
 
             android:background="@android:color/transparent"
             android:tint="@color/colorPrimaryDark"
-            android:src="@drawable/ic_event_available_black_24dp" />
+            android:src="@drawable/ic_event_available_black_24dp"/>
 
         <ImageView
             android:id="@+id/searchListItem_matchIndicator_ImageView"
@@ -75,8 +75,7 @@
 
             android:layout_alignParentBottom="true"
 
-            android:tint="@android:color/holo_green_light"
-            android:src="@drawable/ic_tick_black_24dp" />
+            android:tint="@android:color/holo_green_light" />
 
     </RelativeLayout>
 </LinearLayout>

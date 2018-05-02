@@ -7,12 +7,16 @@ import android.widget.ListView;
 public class SearchActivity extends AppCompatActivity {
 
     private RecipeListItem[] recipes;
-    ListView lv = findViewById(R.id.search_result_ListView);
+
+    ListView lv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+
+        lv = findViewById(R.id.search_result_ListView);
 
         getSearchResults();
     }
