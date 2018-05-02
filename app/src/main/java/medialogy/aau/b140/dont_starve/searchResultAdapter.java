@@ -9,6 +9,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 
 public class searchResultAdapter extends BaseAdapter {
 
@@ -66,6 +69,15 @@ public class searchResultAdapter extends BaseAdapter {
         //Sets headline and descrition of the current list item
         headline.setText(rli.name);
         description.setText(rli.desc);
+
+        URLImageLoader loader = new URLImageLoader();
+        loader.setView(img);
+
+        try {
+            loader.execute(new URL("https://ih0.redbubble.net/image.338335316.3746/flat,800x800,070,f.u2.jpg"));
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
 
         //Sets the Match Indicator of the current list item
         switch (rli.compatibility){
