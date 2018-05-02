@@ -3,8 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:background="@color/backgroundPrimaryColor"
     android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:>
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/chosenDate"
@@ -21,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal|top"
-            android:background="#FFF">
+            android:background="#FFF"
+            android:focusedMonthDateColor="@color/colorPrimary">
 
         </CalendarView>
 
