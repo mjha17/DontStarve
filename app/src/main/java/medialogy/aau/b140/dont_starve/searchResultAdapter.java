@@ -58,7 +58,7 @@ public class searchResultAdapter extends BaseAdapter {
         headline.setText(rli.name);
         description.setText(rli.desc);
 
-        switch (rli.Compatibility){
+        switch (rli.compatibility){
 
             case 1:
                 matchIndicator.setImageResource(R.drawable.ic_tick_black_24dp);

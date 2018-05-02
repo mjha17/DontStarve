@@ -7,9 +7,12 @@ public class RecipeListItem {
 
     String[] ingredients;
 
-    int Compatibility;
+    int compatibility;
 
     RecipeListItem(){
-        //Somehow create from database
+        name = "Spaghetti";
+        desc = "Originally, spaghetti was notably long, but shorter lengths gained in popularity during the latter half of the 20th century and now it is most commonly available in 25–30 cm (10–12 in) lengths";
+
+        compatibility = 2;
     }
 }
