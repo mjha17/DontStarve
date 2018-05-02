@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class MonthlyTab extends Fragment {
 
+    /*
     CalendarView calendarView;
     TextView chosenDate;
 
@@ -19,8 +20,8 @@ public class MonthlyTab extends Fragment {
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
 
-        //calendarView = (CalendarView) findViewById(R.id.chosenMonth);
-        //chosenDate = (TextView) findViewById(R.id.chosenDate);
+        calendarView = (CalendarView) findViewById(R.id.chosenMonth);
+        chosenDate = (TextView) findViewById(R.id.chosenDate);
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -30,4 +31,5 @@ public class MonthlyTab extends Fragment {
             }
         });
     }
+    */
 }
