@@ -51,6 +51,7 @@ public class CalendarActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -135,9 +136,15 @@ public class CalendarActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch(position){
+                case 0:
+                    DailyTab dt = new DailyTab();
+                    return dt;
+                case 1:
+                    MonthlyTab mt = new MonthlyTab();
+                    return mt;
+            }
+            return null;
         }
 
         @Override
