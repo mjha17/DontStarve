@@ -33,8 +33,8 @@ public class CalendarActivity extends AppCompatActivity {
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
 
-    private Date[] plannedDays;
-    private Date currentDate = new Date();
+    private Date plannedDays;
+    private Date currentDay = new Date();
     private RecipeListItem[] recipes;
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -164,8 +164,6 @@ public class CalendarActivity extends AppCompatActivity {
 
     }
     private void toMainScreen(){
-        Intent intent = new Intent(CalendarActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
-        startActivityIfNeeded(intent, 0);
+
     }
 }
