@@ -12,24 +12,9 @@ import android.widget.TextView;
 
 public class MonthlyTab extends Fragment {
 
-    /*
-    CalendarView calendarView;
-    TextView chosenDate;
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-
-        calendarView = (CalendarView) findViewById(R.id.chosenMonth);
-        chosenDate = (TextView) findViewById(R.id.chosenDate);
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                String date = (i1 + 1) + "/" + i2 + "/" + i;
-                chosenDate.setText(date);
-            }
-        });
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.tab_monthly, container, false);
     }
-    */
 }
