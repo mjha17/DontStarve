@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,6 +16,8 @@
 
             android:layout_marginLeft="6dp"
             android:layout_marginRight="6dp"
+
+            android:elevation="1dp"
 
             android:textCursorDrawable="@drawable/black_cursor"
             android:textColor="@color/secondaryTextColor"
@@ -31,13 +34,15 @@
         </TextView>
 
         <ImageButton
-            android:id="@+id/main_addIngredient_ImageButton"
+            android:id="@+id/ingredient_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_gravity="center_vertical"
 
-            android:padding="4dp"
+            android:elevation="3dp"
+
+            android:padding="0dp"
             android:layout_marginRight="8dp"
 
             android:background="@drawable/round"

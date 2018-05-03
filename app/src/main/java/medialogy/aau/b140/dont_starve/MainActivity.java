@@ -5,10 +5,12 @@ import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -65,12 +67,26 @@ public class MainActivity extends AppCompatActivity {
                 addIngredient();
             }
         });
+
+        addingIngredients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Ingredients.remove(i);
+                mainScreenAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     private void addIngredient(){
         //Add the ingredient/leftover written in the input field
-        //? - Check if valid ingredient
-        Ingredients.add(input.getText().toString());
+        String ingredient = input.getText().toString();
+
+        if(ingredient.equals("") || ingredient == null) return;
+
+        Ingredients.add(ingredient);
+        mainScreenAdapter.notifyDataSetChanged();
+
+        input.setText("");
     }
 
     private void toSearch(){
