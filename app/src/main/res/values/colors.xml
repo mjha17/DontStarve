@@ -9,4 +9,8 @@
     <color name="bigTextColor">#ffffff</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#aaaaaa</color>
+
+    <color name="negativeAction">#ff0000</color>
+    <color name="neutralAction">#ffff00</color>
+    <color name="positiveAction">#00ff00</color>
 </resources>
