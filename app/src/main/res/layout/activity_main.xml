@@ -51,7 +51,7 @@
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal">
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/main_inputIngredient_EditText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -66,7 +66,7 @@
             android:textColor="@color/primaryTextColor"
 
             android:layout_weight="7">
-        </EditText>
+        </AutoCompleteTextView>
 
         <ImageButton
             android:id="@+id/main_addIngredient_ImageButton"

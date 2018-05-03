@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#357266</color>
-    <color name="colorPrimaryDark">#0E3B43</color>
+    <color name="colorPrimaryDark">#125959</color>
     <color name="colorAccent">#A17C6B</color>
     <color name="colorAccentLight">#CEB5A7</color>
 
@@ -11,7 +11,7 @@
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#aaaaaa</color>
 
-    <color name="negativeAction">#ff0000</color>
-    <color name="neutralAction">#ffff00</color>
-    <color name="positiveAction">#00ff00</color>
+    <color name="negativeAction">#DB3939</color>
+    <color name="neutralAction">#F49B00</color>
+    <color name="positiveAction">#40CE5C</color>
 </resources>

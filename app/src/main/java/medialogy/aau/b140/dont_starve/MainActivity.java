@@ -1,28 +1,28 @@
 package medialogy.aau.b140.dont_starve;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     ingredientListAdpter mainScreenAdapter;
+    ArrayAdapter<String> autoCompleteAdapter;
     ArrayList<String> Ingredients = new ArrayList<String>();
 
     Button searchButton;
     ImageButton calendarButton, addButton;
-    EditText input;
-    ListView addingIngredients;
+    AutoCompleteTextView input;
+    ListView addedIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,15 @@ public class MainActivity extends AppCompatActivity {
         calendarButton = findViewById(R.id.main_calendar_ImageButton);
         addButton = findViewById(R.id.main_addIngredient_ImageButton);
 
-        input = findViewById(R.id.main_inputIngredient_EditText);
+        String[] autoCompleteIngredients = getResources().getStringArray(R.array.ingredients_array);
+        autoCompleteAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, autoCompleteIngredients);
 
-        addingIngredients = findViewById(R.id.addedIngredients);
+        input = findViewById(R.id.main_inputIngredient_EditText);
+        input.setAdapter(autoCompleteAdapter);
+
+        addedIngredients = findViewById(R.id.addedIngredients);
         mainScreenAdapter = new ingredientListAdpter(Ingredients, getApplicationContext());
-        addingIngredients.setAdapter(mainScreenAdapter);
+        addedIngredients.setAdapter(mainScreenAdapter);
 
         //Demo ingredient
         //!! - SHOULD BE REMOVED AT A LATER POINT !!
@@ -68,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        addingIngredients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        addedIngredients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Ingredients.remove(i);

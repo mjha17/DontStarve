@@ -10,4 +10,17 @@
     <string name="recipes">Recipes</string>
     <string name="leftovers">Leftovers</string>
     <string name="calendar">Calendar</string>
+
+    <string-array name="ingredients_array">
+        <item>Lettuce</item>
+        <item>Cucumber</item>
+        <item>Tomato</item>
+        <item>Milk</item>
+        <item>Cream</item>
+        <item>Butter</item>
+        <item>Rice</item>
+        <item>Spaghetti</item>
+        <item>Cherry Tomato</item>
+        <item>Green Tomato</item>
+    </string-array>
 </resources>
