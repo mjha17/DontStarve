@@ -9,9 +9,12 @@
 
     <ImageView
         android:id="@+id/searchListItem_image_ImageView"
+        android:padding="2dp"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_gravity="left|center_vertical"
+        android:scaleType="centerCrop"
+        android:cropToPadding="true"
         android:src="@drawable/ic_launcher_foreground"
         app:srcCompat="@android:color/darker_gray" />
 
@@ -60,7 +63,7 @@
 
             android:background="@android:color/transparent"
             android:tint="@color/colorPrimaryDark"
-            android:src="@drawable/ic_event_available_black_24dp" />
+            android:src="@drawable/ic_event_available_black_24dp"/>
 
         <ImageView
             android:id="@+id/searchListItem_matchIndicator_ImageView"
@@ -75,8 +78,7 @@
 
             android:layout_alignParentBottom="true"
 
-            android:tint="@android:color/holo_green_light"
-            android:src="@drawable/ic_tick_black_24dp" />
+            android:tint="@android:color/holo_green_light" />
 
     </RelativeLayout>
 </LinearLayout>

@@ -1,11 +1,14 @@
 package medialogy.aau.b140.dont_starve;
 
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.widget.ImageView;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
@@ -14,24 +17,29 @@ import java.net.URL;
 
 public class URLImageLoader extends AsyncTask<URL, Integer, Bitmap> {
 
-    private int id;
+    private ImageView view;
     private BitmapFactory bf = new BitmapFactory();
-    private AsyncResponse responce;
 
-    private URLImageLoader(){}
+    public URLImageLoader(){}
 
-    public void setId(int id) {
-        this.id = id;
+    public void setView(ImageView view) {
+        this.view = view;
     }
 
     @Override
     protected Bitmap doInBackground(URL... urls) {
 
         Bitmap bitmap = null;
+        URL url = urls[0];
 
         try {
-            InputStream is = urls[0].openStream();
-            bf.decodeStream(is);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setDoInput(true);
+            connection.connect();
+
+            InputStream is = connection.getInputStream();
+
+            bitmap = bf.decodeStream(is);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -43,7 +51,6 @@ public class URLImageLoader extends AsyncTask<URL, Integer, Bitmap> {
     protected void onPostExecute(Bitmap bitmap) {
         super.onPostExecute(bitmap);
 
-        responce.asyncResponse(bitmap, id);
-
+        view.setImageBitmap(bitmap);
     }
 }
