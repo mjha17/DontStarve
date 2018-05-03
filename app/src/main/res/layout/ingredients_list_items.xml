@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/main_inputIngredient_EditText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+
+            android:backgroundTint="@color/secondaryTextColor"
+            android:textCursorDrawable="@drawable/black_cursor"
+            android:textColor="@color/secondaryTextColor"
+            android:text="Ingredient"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:textSize="20dp"
+
+            android:layout_weight="7">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/main_addIngredient_ImageButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            android:padding="12dp"
+
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_clear_black_24dp" />
+    </LinearLayout>
+
+</LinearLayout>
