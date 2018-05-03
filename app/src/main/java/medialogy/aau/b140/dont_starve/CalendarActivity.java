@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class CalendarActivity extends AppCompatActivity {
@@ -51,6 +53,16 @@ public class CalendarActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.DATE_FIELD).format(calendar.getTime());
+        String weekday = DateFormat.getDateInstance(DateFormat.DAY_OF_WEEK_FIELD).format(calendar.getTime());
+
+        TextView textViewWeek = findViewById(R.id.weekday);
+        TextView textViewDate = findViewById(R.id.today_date);
+        textViewDate.setText(currentDate);
+        textViewWeek.setText(weekday);
+
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
