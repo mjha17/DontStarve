@@ -8,17 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    ingredientListAdpter mainScreenAdapter;
     ArrayList<String> Ingredients = new ArrayList<String>();
 
     Button searchButton;
     ImageButton calendarButton, addButton;
     EditText input;
-
+    ListView addingIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         addButton = findViewById(R.id.main_addIngredient_ImageButton);
 
         input = findViewById(R.id.main_inputIngredient_EditText);
+
+        addingIngredients = findViewById(R.id.addedIngredients);
+        mainScreenAdapter = new ingredientListAdpter(Ingredients, getApplicationContext());
+        addingIngredients.setAdapter(mainScreenAdapter);
 
         //Demo ingredient
         //!! - SHOULD BE REMOVED AT A LATER POINT !!

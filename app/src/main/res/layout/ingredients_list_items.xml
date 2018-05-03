@@ -9,7 +9,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/main_inputIngredient_EditText"
+            android:id="@+id/ingredient_item"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
@@ -43,7 +43,7 @@
             android:background="@drawable/round"
             android:backgroundTint="@color/negativeAction"
             android:tint="@android:color/white"
-            android:src="@drawable/ic_clear_black_24dp" />
+            android:src="@drawable/ic_clear_black_24dp"/>
     </LinearLayout>
 
 </LinearLayout>
