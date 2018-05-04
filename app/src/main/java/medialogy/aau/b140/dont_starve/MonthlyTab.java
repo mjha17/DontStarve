@@ -15,6 +15,18 @@ public class MonthlyTab extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.tab_monthly, container, false);
+
+        View v = inflater.inflate(R.layout.tab_monthly, container, false);
+
+        CalendarView calendarView = v.findViewById(R.id.calendar_calendar_CalendarView);
+
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
+                System.out.println("Date: " + i2);
+            }
+        });
+
+        return v;
     }
 }

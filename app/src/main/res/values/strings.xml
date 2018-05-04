@@ -12,15 +12,71 @@
     <string name="calendar">Calendar</string>
 
     <string-array name="ingredients_array">
-        <item>Lettuce</item>
-        <item>Cucumber</item>
-        <item>Tomato</item>
-        <item>Milk</item>
-        <item>Cream</item>
+        <item>Beer</item>
+        <item>Beetroot</item>
+        <item>Beans</item>
+        <item>Cayenne Pepper</item>
+        <item>Pepper</item>
+        <item>Coconut Cream</item>
+        <item>Coconut Milk</item>
+        <item>Cos Lettuce</item>
+        <item>Dill</item>
+        <item>Rhubarb</item>
+        <item>Mustard Seeds</item>
+        <item>Mustard</item>
+        <item>Parsnip</item>
+        <item>Stewing Lamb</item>
+        <item>Acorn Squash</item>
+        <item>Ale</item>
+        <item>Aleppo Pepper</item>
+        <item>Almond</item>
+        <item>Almond Essence</item>
+        <item>Almond Milk</item>
+        <item>Anchovies</item>
+        <item>Anise</item>
+        <item>Apple</item>
+        <item>Apple Chutney</item>
+        <item>Apple Juice</item>
+        <item>Apricot</item>
+        <item>Artichoke</item>
+        <item>Asparagus</item>
+        <item>Avocado</item>
+        <item>Bacon</item>
+        <item>Bagel</item>
+        <item>Baguette</item>
+        <item>Baking Powder</item>
+        <item>Balsamic Vinegar</item>
+        <item>Vinegar</item>
+        <item>Banana</item>
+        <item>Barbecue Sauce</item>
+        <item>Barley</item>
+        <item>Basil</item>
+        <item>Basmati Rice</item>
+        <item>Beef</item>
+        <item>Beef Mince</item>
+        <item>Beef Ribs</item>
+        <item>Beef Rump</item>
+        <item>Beef Sausage</item>
+        <item>Beef Stock</item>
+        <item>Black Beans</item>
+        <item>Black Pepper</item>
+        <item>Blackcurrant</item>
+        <item>Blackberry</item>
+        <item>Blood Orange</item>
+        <item>Blueberry</item>
+        <item>Bramley apple</item>
+        <item>Brandy</item>
+        <item>Bratwurst</item>
+        <item>Brazil Nut</item>
+        <item>Brie</item>
+        <item>Broth</item>
+        <item>Broccoli</item>
+        <item>Brown lentil</item>
+        <item>Brown rice</item>
+        <item>Brown shrimp</item>
+        <item>Brown Sugar</item>
+        <item>Bulgur Wheat</item>
         <item>Butter</item>
-        <item>Rice</item>
-        <item>Spaghetti</item>
-        <item>Cherry Tomato</item>
-        <item>Green Tomato</item>
+        <item>Buttermilk</item>
     </string-array>
 </resources>

@@ -15,7 +15,7 @@ import java.net.URL;
 
 public class searchResultAdapter extends BaseAdapter {
 
-    //List of reciepes to fill the ListView with
+    //List of recipes to fill the ListView with
     private RecipeListItem[] recipes;
 
     //Context from the ListViews origin
@@ -24,7 +24,7 @@ public class searchResultAdapter extends BaseAdapter {
     //Inflater - Used to inflate list layout later
     private LayoutInflater inflater;
 
-    searchResultAdapter(Context ctx, RecipeListItem[] recipes){
+    searchResultAdapter(Context ctx, RecipeListItem[] recipes) {
         this.ctx = ctx;
         this.recipes = recipes;
 
@@ -50,7 +50,7 @@ public class searchResultAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View v = view;
 
-        if(v == null)
+        if (v == null)
             //Inflates the list layout
             v = inflater.inflate(R.layout.search_listitem, null);
 
@@ -67,20 +67,14 @@ public class searchResultAdapter extends BaseAdapter {
         ImageButton calendar = v.findViewById(R.id.searchListItem_calendar_ImageButton);
 
         //Sets headline and descrition of the current list item
-        headline.setText(rli.name);
-        description.setText(rli.desc);
+        headline.setText(rli.getName());
+        description.setText(rli.getDesc());
 
         URLImageLoader loader = new URLImageLoader();
         loader.setView(img);
 
-        try {
-            loader.execute(new URL("https://ih0.redbubble.net/image.338335316.3746/flat,800x800,070,f.u2.jpg"));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
         //Sets the Match Indicator of the current list item
-        switch (rli.compatibility){
+        switch (rli.getCompatibility()) {
 
             case 1:
                 matchIndicator.setImageResource(R.drawable.ic_tick_black_24dp);

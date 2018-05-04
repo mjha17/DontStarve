@@ -28,15 +28,14 @@ public class SearchActivity extends AppCompatActivity implements AsyncResponse{
 
     private void getSearchResults(){
 
-        recipes = new RecipeListItem[20];
-
-        for(int i=0; i<recipes.length; i++){
-            recipes[i] = new RecipeListItem();
-        }
-
+        gatherRecipes();
 
         adapter = new searchResultAdapter(getApplicationContext(), recipes);
         lv.setAdapter(adapter);
+
+    }
+
+    private void gatherRecipes(){
 
     }
 
@@ -55,6 +54,5 @@ public class SearchActivity extends AppCompatActivity implements AsyncResponse{
         ImageView iv = v.findViewById(R.id.searchListItem_calendar_ImageButton);
 
         iv.setImageBitmap(bitmap);
-
     }
 }

@@ -1,20 +1,65 @@
 package medialogy.aau.b140.dont_starve;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class RecipeListItem {
-    String name;
-    String desc;
-    String reciepe;
+    private String name;
+    private String desc;
+    private String reciepe;
 
-    String[] ingredients;
+    private String[] ingredients;
+    private URL imageSrc;
 
-    int compatibility;
+    private int compatibility;
 
     //Demo constructor
     //!! - SHOULD BE REMOVED WHEN PROPERLY IMPLEMENTED - !!
-    RecipeListItem(){
-        name = "Spaghetti";
-        desc = "Originally, spaghetti was notably long, but shorter lengths gained in popularity during the latter half of the 20th century and now it is most commonly available in 25–30 cm (10–12 in) lengths";
+    RecipeListItem(String name){
+        this.name = name;
+    }
 
-        compatibility = 2;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getReciepe() {
+        return reciepe;
+    }
+
+    public void setReciepe(String reciepe) {
+        this.reciepe = reciepe;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public URL getImageSrc() {
+        return imageSrc;
+    }
+
+    public void setImageSrc(URL imageSrc) {
+        this.imageSrc = imageSrc;
+    }
+
+    public int getCompatibility() {
+        return compatibility;
     }
 }

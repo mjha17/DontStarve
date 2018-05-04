@@ -54,15 +54,17 @@
             android:layout_height="wrap_content"
 
             android:layout_margin="6dp"
-            android:padding="3dp"
+            android:padding="4dp"
+            android:elevation="2dp"
 
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
 
             android:layout_alignParentTop="true"
 
-            android:background="@android:color/transparent"
-            android:tint="@color/colorPrimaryDark"
+            android:background="@drawable/round"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:tint="@color/bigTextColor"
             android:src="@drawable/ic_event_available_black_24dp"/>
 
         <ImageView
@@ -71,14 +73,14 @@
             android:layout_height="wrap_content"
 
             android:layout_margin="6dp"
-            android:padding="3dp"
+            android:padding="4dp"
 
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
 
             android:layout_alignParentBottom="true"
 
-            android:tint="@android:color/holo_green_light" />
+            android:tint="@color/positiveAction" />
 
     </RelativeLayout>
 </LinearLayout>

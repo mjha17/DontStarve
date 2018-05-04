@@ -30,6 +30,8 @@
             android:textCursorDrawable="@drawable/black_cursor"
             android:textColor="@color/primaryTextColor"
 
+            android:hint="Recipes"
+
             android:layout_weight="7">
         </EditText>
 
@@ -41,6 +43,7 @@
             android:layout_gravity="center_vertical"
 
             android:padding="12dp"
+            android:elevation="2dp"
 
             android:backgroundTint="@color/colorPrimary"
             android:tint="@color/bigTextColor"
