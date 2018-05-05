@@ -6,15 +6,12 @@ import java.net.URL;
 public class RecipeListItem {
     private String name;
     private String desc;
-    private String reciepe;
 
     private String[] ingredients;
     private URL imageSrc;
 
     private int compatibility;
 
-    //Demo constructor
-    //!! - SHOULD BE REMOVED WHEN PROPERLY IMPLEMENTED - !!
     RecipeListItem(String name){
         this.name = name;
     }
@@ -33,14 +30,6 @@ public class RecipeListItem {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    public String getReciepe() {
-        return reciepe;
-    }
-
-    public void setReciepe(String reciepe) {
-        this.reciepe = reciepe;
     }
 
     public String[] getIngredients() {

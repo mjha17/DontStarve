@@ -1,6 +1,5 @@
 package medialogy.aau.b140.dont_starve;
 
-import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class SearchActivity extends AppCompatActivity implements AsyncResponse{
+public class SearchActivity extends AppCompatActivity implements URLImageResponse {
 
     private RecipeListItem[] recipes;
 
@@ -48,7 +47,7 @@ public class SearchActivity extends AppCompatActivity implements AsyncResponse{
     }
 
     @Override
-    public void asyncResponse(Bitmap bitmap, int id) {
+    public void onURLImageLoaded(Bitmap bitmap, int id) {
 
         View v = (View) adapter.getItem(id);
         ImageView iv = v.findViewById(R.id.searchListItem_calendar_ImageButton);
