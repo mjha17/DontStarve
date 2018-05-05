@@ -1,6 +1,5 @@
 package medialogy.aau.b140.dont_starve;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class RecipeListItem {
@@ -12,8 +11,12 @@ public class RecipeListItem {
 
     private int compatibility;
 
-    RecipeListItem(String name){
+    RecipeListItem(String name, String desc, String[] ingredients, URL imageSrc){
         this.name = name;
+        this.desc = desc;
+
+        this.ingredients = ingredients;
+        this.imageSrc = imageSrc;
     }
 
     public String getName() {

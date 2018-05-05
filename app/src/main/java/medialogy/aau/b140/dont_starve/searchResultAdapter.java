@@ -72,6 +72,7 @@ public class searchResultAdapter extends BaseAdapter {
 
         URLImageLoader loader = new URLImageLoader();
         loader.setView(img);
+        loader.execute(rli.getImageSrc());
 
         //Sets the Match Indicator of the current list item
         switch (rli.getCompatibility()) {

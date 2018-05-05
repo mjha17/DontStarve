@@ -18,7 +18,7 @@ public class MonthlyTab extends Fragment {
 
         View v = inflater.inflate(R.layout.tab_monthly, container, false);
 
-        CalendarView calendarView = v.findViewById(R.id.calendar_calendar_CalendarView);
+        CalendarView calendarView = v.findViewById(R.id.chosenMonth);
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override

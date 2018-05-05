@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipes>
+    <Recipe
+        Name="Asparagus omelette"
+        Desc="A quick and easy asparagus omelette that makes the most of seasonal greens. Serve up this veggie supper for two with pesto and crunchy seeds"
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/asparagus-omelette.jpg">
+
+
+        <Ingredient Name="Asparagus"/>
+        <Ingredient Name="Eggs"/>
+        <Ingredient Name="Pesto"/>
+
+    </Recipe>
+    <Recipe
+        Name="Chicken &amp; crispy capers"
+        Desc="Combine chicken thighs with new potatoes and capers to make this quick and easy midweek meal, with stuffed olives and lemon zest to add some extra oomph"
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2018/04/chicken-crispy-capers-with-new-potatoes.jpg">
+
+
+        <Ingredient Name="potatoes"/>
+        <Ingredient Name="flour"/>
+        <Ingredient Name="oregano"/>
+        <Ingredient Name="chicken thighs"/>
+        <Ingredient Name="olive oil"/>
+        <Ingredient Name="capers"/>
+        <Ingredient Name="green olives"/>
+        <Ingredient Name="lemon"/>
+        <Ingredient Name="parsley"/>
+        <Ingredient Name="pepper"/>
+
+    </Recipe>
+</Recipes>

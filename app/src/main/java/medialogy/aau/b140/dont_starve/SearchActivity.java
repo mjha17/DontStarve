@@ -7,12 +7,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-public class SearchActivity extends AppCompatActivity implements URLImageResponse {
+import java.io.IOException;
+
+public class SearchActivity extends AppCompatActivity {
 
     private RecipeListItem[] recipes;
 
     ListView lv;
     searchResultAdapter adapter;
+    XMLRecipeParser parser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +25,21 @@ public class SearchActivity extends AppCompatActivity implements URLImageRespons
 
         lv = findViewById(R.id.search_result_ListView);
 
-        getSearchResults();
+        try {
+
+            parser = new XMLRecipeParser(this);
+            parser.execute(getAssets().open("recipes.xml"));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void getSearchResults(){
-
-        gatherRecipes();
+    public void getSearchResults(RecipeListItem[] recipes){
+        this.recipes = recipes;
 
         adapter = new searchResultAdapter(getApplicationContext(), recipes);
         lv.setAdapter(adapter);
-
     }
 
     private void gatherRecipes(){
@@ -44,14 +52,5 @@ public class SearchActivity extends AppCompatActivity implements URLImageRespons
 
     private void toMainScreen(){
 
-    }
-
-    @Override
-    public void onURLImageLoaded(Bitmap bitmap, int id) {
-
-        View v = (View) adapter.getItem(id);
-        ImageView iv = v.findViewById(R.id.searchListItem_calendar_ImageButton);
-
-        iv.setImageBitmap(bitmap);
     }
 }
