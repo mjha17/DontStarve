@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_margin="6dp"
+            android:layout_marginHorizontal="6dp"
             android:padding="4dp"
 
             android:layout_alignParentEnd="true"
@@ -80,7 +80,8 @@
 
             android:layout_alignParentBottom="true"
 
-            android:tint="@color/positiveAction" />
+            android:tint="@color/positiveAction"
+            android:src="@drawable/ic_compat_tick"/>
 
     </RelativeLayout>
 </LinearLayout>

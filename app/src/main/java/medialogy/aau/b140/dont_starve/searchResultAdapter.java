@@ -1,6 +1,7 @@
 package medialogy.aau.b140.dont_starve;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,13 +79,12 @@ public class searchResultAdapter extends BaseAdapter {
         switch (rli.getCompatibility()) {
 
             case 1:
-                matchIndicator.setImageResource(R.drawable.ic_tick_black_24dp);
+                matchIndicator.setImageResource(R.drawable.ic_compat_tick);
+                matchIndicator.setColorFilter(ContextCompat.getColor(v.getContext(), R.color.positiveAction), android.graphics.PorterDuff.Mode.SRC_IN);
                 break;
             case 2:
-                matchIndicator.setImageResource(R.drawable.ic_tick_black_24dp);
-                break;
-            case 3:
-                matchIndicator.setImageResource(R.drawable.ic_tick_black_24dp);
+                matchIndicator.setImageResource(R.drawable.ic_compat_excl);
+                matchIndicator.setColorFilter(ContextCompat.getColor(v.getContext(), R.color.neutralAction), android.graphics.PorterDuff.Mode.SRC_IN);
                 break;
         }
 

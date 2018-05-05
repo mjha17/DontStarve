@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Demo ingredient
         //!! - SHOULD BE REMOVED AT A LATER POINT !!
-        Ingredients.add("Lettuce");
+        Ingredients.add("asparagus");
 
         //What happend when the 'search' button is clicked
         searchButton.setOnClickListener(new View.OnClickListener() {

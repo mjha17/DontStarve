@@ -17,6 +17,8 @@ public class RecipeListItem {
 
         this.ingredients = ingredients;
         this.imageSrc = imageSrc;
+
+        this.compatibility = 2;
     }
 
     public String getName() {
@@ -53,5 +55,27 @@ public class RecipeListItem {
 
     public int getCompatibility() {
         return compatibility;
+    }
+
+    public void setCompatibility(String[] searchArray){
+        int matches = 0;
+
+        for(String s: ingredients){
+            for(String z: searchArray){
+                System.out.println("Comparing: " + s.toLowerCase() + " and " + z.toLowerCase());
+                if((s.toLowerCase()).equals(z.toLowerCase())) {
+                    System.out.println("X");
+                    matches++;
+                }
+            }
+        }
+
+        System.out.println(name + ": " + matches);
+
+        if(searchArray.length <= matches){
+            this.compatibility = 1;
+        }else{
+            this.compatibility = 2;
+        }
     }
 }

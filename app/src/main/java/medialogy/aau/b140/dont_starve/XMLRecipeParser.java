@@ -25,9 +25,11 @@ public class XMLRecipeParser extends AsyncTask<InputStream, Integer, RecipeListI
 
     Element XML;
     SearchActivity searchActivity;
+    String[] searchIngredients;
 
-    XMLRecipeParser(SearchActivity searchActivity){
+    XMLRecipeParser(SearchActivity searchActivity, String[] searchIngredients){
         this.searchActivity = searchActivity;
+        this.searchIngredients = searchIngredients;
     }
 
     @Override
@@ -76,6 +78,7 @@ public class XMLRecipeParser extends AsyncTask<InputStream, Integer, RecipeListI
             }
 
             recipeListItems[i] = new RecipeListItem(name, desc, ingredients.toArray(new String[ingredients.size()]), imageSrc);
+            recipeListItems[i].setCompatibility(searchIngredients);
         }
 
         System.out.println("Done parsing!");
