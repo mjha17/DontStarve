@@ -1,8 +1,9 @@
 package medialogy.aau.b140.dont_starve;
 
-import java.net.URL;
+import android.support.annotation.NonNull;
 
-public class RecipeListItem {
+import java.net.URL;
+public class RecipeListItem implements Comparable<RecipeListItem> {
     private String name;
     private String desc;
 
@@ -57,13 +58,13 @@ public class RecipeListItem {
         return compatibility;
     }
 
-    public void setCompatibility(String[] searchArray){
+    public void setCompatibility(String[] searchArray) {
         int matches = 0;
 
-        for(String s: ingredients){
-            for(String z: searchArray){
+        for (String s : ingredients) {
+            for (String z : searchArray) {
                 System.out.println("Comparing: " + s.toLowerCase() + " and " + z.toLowerCase());
-                if((s.toLowerCase()).equals(z.toLowerCase())) {
+                if ((s.toLowerCase()).equals(z.toLowerCase())) {
                     System.out.println("X");
                     matches++;
                 }
@@ -72,10 +73,15 @@ public class RecipeListItem {
 
         System.out.println(name + ": " + matches);
 
-        if(searchArray.length <= matches){
+        if (searchArray.length <= matches) {
             this.compatibility = 1;
-        }else{
+        } else {
             this.compatibility = 2;
         }
+    }
+
+    @Override
+    public int compareTo(@NonNull RecipeListItem recipeListItem) {
+        return this.getCompatibility() - recipeListItem.getCompatibility();
     }
 }

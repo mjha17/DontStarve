@@ -20,16 +20,16 @@ public class searchResultAdapter extends BaseAdapter {
     private RecipeListItem[] recipes;
 
     //Context from the ListViews origin
-    private Context ctx;
+    private SearchActivity searchActivity;
 
     //Inflater - Used to inflate list layout later
     private LayoutInflater inflater;
 
-    searchResultAdapter(Context ctx, RecipeListItem[] recipes) {
-        this.ctx = ctx;
+    searchResultAdapter(SearchActivity searchActivity, RecipeListItem[] recipes) {
+        this.searchActivity = searchActivity;
         this.recipes = recipes;
 
-        inflater = LayoutInflater.from(this.ctx);
+        inflater = LayoutInflater.from(searchActivity.getApplicationContext());
     }
 
     @Override
@@ -56,7 +56,7 @@ public class searchResultAdapter extends BaseAdapter {
             v = inflater.inflate(R.layout.search_listitem, null);
 
         //Initiates 'rli' - Stores the RecipeListItem currently being inflated
-        RecipeListItem rli = recipes[i];
+        final RecipeListItem rli = recipes[i];
 
         //Getting components from the list layout
         TextView headline = v.findViewById(R.id.searchListItem_headline_TextView);
@@ -66,6 +66,13 @@ public class searchResultAdapter extends BaseAdapter {
         ImageView matchIndicator = v.findViewById(R.id.searchListItem_matchIndicator_ImageView);
 
         ImageButton calendar = v.findViewById(R.id.searchListItem_calendar_ImageButton);
+
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                searchActivity.toCalendar(rli);
+            }
+        });
 
         //Sets headline and descrition of the current list item
         headline.setText(rli.getName());

@@ -10,6 +10,9 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -43,18 +46,20 @@ public class SearchActivity extends AppCompatActivity {
         }
     }
 
+    public void toCalendar(RecipeListItem recipe){
+        Toast.makeText(getApplicationContext(), recipe.getName(), Toast.LENGTH_LONG).show();
+    }
+
     public void getSearchResults(RecipeListItem[] recipes){
         this.recipes = recipes;
 
-        adapter = new searchResultAdapter(getApplicationContext(), recipes);
+        Arrays.sort(this.recipes);
+
+        adapter = new searchResultAdapter(this, recipes);
         lv.setAdapter(adapter);
     }
 
     private void gatherRecipes(){
-
-    }
-
-    private void toCaldender(RecipeListItem recipe){
 
     }
 
