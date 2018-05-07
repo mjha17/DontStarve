@@ -42,19 +42,83 @@
 
     </Recipe>
     <Recipe
-        Name="Chocolate brownies"
-        Desc="A foolproof brownie recipe for a squidgy chocolate bake. Watch our recipe video to help you get a perfect traybake every time."
-        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1001464_11.jpg">
+        Name="Salmon &amp; spinach"
+        Desc="Ever-versatile salmon is as popular on our shopping lists as chicken. Make the most of it with this impressive recipe."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/user-collections/my-colelction-image/2015/12/recipe-image-legacy-id--52867_12.jpg">
 
+        <Ingredient Name="oil"/>
+        <Ingredient Name="salmon"/>
+        <Ingredient Name="spinach"/>
+        <Ingredient Name="crème fraîche"/>
+        <Ingredient Name="lemon juice"/>
+        <Ingredient Name="caper"/>
+        <Ingredient Name="parsley"/>
 
-        <Ingredient Name="unsalted butter"/>
-        <Ingredient Name="dark chocolate"/>
-        <Ingredient Name="flour"/>
-        <Ingredient Name="cocoa powder"/>
-        <Ingredient Name="white chocolate"/>
-        <Ingredient Name="milk chocolate"/>
-        <Ingredient Name="eggs"/>
+    </Recipe>
+    <Recipe
+        Name="Macaroons"
+        Desc="Bake our heavenly raspberry macaroons for afternoon tea, or as the final flourish for a dinner party. They taste as gorgeous as they look."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--46765_10.jpg">
+
+        <Ingredient Name="egg"/>
         <Ingredient Name="sugar"/>
+        <Ingredient Name="almonds"/>
+        <Ingredient Name="mascarpone"/>
+        <Ingredient Name="raspberry jam"/>
+
+    </Recipe>
+    <Recipe
+        Name="Cinnamon rolls"
+        Desc="Use ready-made croissant dough to make these easy cinnamon rolls. We’ve topped the rolls with a thick caramel, but you could use a thin white icing instead."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/11/really-easy-cinnamon-rolls.jpg">
+
+        <Ingredient Name="croissant dough "/>
+        <Ingredient Name="butter"/>
+        <Ingredient Name="cinnamon"/>
+        <Ingredient Name="brown sugar"/>
+
+    </Recipe>
+    <Recipe
+        Name="Onion rings"
+        Desc="You can rustle up these crispy bites with a few storecupboard ingredients - sparkling water is the key to a really light batter."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/onion-rings.jpg">
+
+        <Ingredient Name="onion"/>
+        <Ingredient Name="oil"/>
+        <Ingredient Name="flour"/>
+        <Ingredient Name="sparkling water"/>
+
+    </Recipe>
+    <Recipe
+        Name="American blueberry pancakes"
+        Desc="Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/user-collections/my-colelction-image/2015/12/recipe-image-legacy-id--1273456_8.jpg">
+
+        <Ingredient Name="flour"/>
+        <Ingredient Name="baking powder"/>
+        <Ingredient Name="egg"/>
+        <Ingredient Name="milk"/>
+        <Ingredient Name="butter"/>
+        <Ingredient Name="blueberry"/>
+        <Ingredient Name="oil"/>
+        <Ingredient Name="maple syrup"/>
+
+    </Recipe>
+    <Recipe
+        Name="Pizza"
+        Desc="Take your senses on a trip to Italy with this authentic pizza Margherita."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--2043_12.jpg">
+
+        <Ingredient Name="flour"/>
+        <Ingredient Name="salt"/>
+        <Ingredient Name="yeast"/>
+        <Ingredient Name="olive oil"/>
+        <Ingredient Name="water"/>
+        <Ingredient Name="tomato"/>
+        <Ingredient Name="garlic"/>
+        <Ingredient Name="tomato purée"/>
+        <Ingredient Name="mozzarella"/>
+        <Ingredient Name="basil"/>
 
     </Recipe>
     <Recipe

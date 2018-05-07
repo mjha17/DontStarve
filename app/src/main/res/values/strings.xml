@@ -16,15 +16,12 @@
         <item>Beetroot</item>
         <item>Beans</item>
         <item>Cayenne Pepper</item>
-        <item>Pepper</item>
         <item>Coconut Cream</item>
         <item>Coconut Milk</item>
         <item>Cos Lettuce</item>
         <item>Dill</item>
         <item>Rhubarb</item>
         <item>Mustard Seeds</item>
-        <item>Mustard</item>
-        <item>Parsnip</item>
         <item>Stewing Lamb</item>
         <item>Acorn Squash</item>
         <item>Ale</item>
@@ -46,7 +43,6 @@
         <item>Baguette</item>
         <item>Baking Powder</item>
         <item>Balsamic Vinegar</item>
-        <item>Vinegar</item>
         <item>Banana</item>
         <item>Barbecue Sauce</item>
         <item>Barley</item>
@@ -78,5 +74,181 @@
         <item>Bulgur Wheat</item>
         <item>Butter</item>
         <item>Buttermilk</item>
+        <item>Cabbage</item>
+        <item>Caramel</item>
+        <item>Carrot</item>
+        <item>Cashew</item>
+        <item>Cauliflower</item>
+        <item>Celery</item>
+        <item>Cheddar</item>
+        <item>Cheese</item>
+        <item>Cherry</item>
+        <item>Chestnut</item>
+        <item>Chicken</item>
+        <item>Chicken brest</item>
+        <item>Chicken leg</item>
+        <item>Chicken wings</item>
+        <item>Chilli</item>
+        <item>Chives</item>
+        <item>Chocolate</item>
+        <item>Ciabatta</item>
+        <item>Cinnamon</item>
+        <item>Clementine</item>
+        <item>Cloves</item>
+        <item>Cocoa butter</item>
+        <item>Cocoa powder</item>
+        <item>Coconut</item>
+        <item>Coffee</item>
+        <item>Cottage cheese</item>
+        <item>Crab</item>
+        <item>Cranberry</item>
+        <item>Cream cheese</item>
+        <item>Curry</item>
+        <item>Dark chocolate</item>
+        <item>Duck</item>
+        <item>Egg</item>
+        <item>Feta</item>
+        <item>Fig</item>
+        <item>Flour</item>
+        <item>Garlic</item>
+        <item>Gelatin</item>
+        <item>Ginger</item>
+        <item>Goose</item>
+        <item>Gorgonzola</item>
+        <item>Gouda</item>
+        <item>Grapefruit</item>
+        <item>Grapes</item>
+        <item>Green beans</item>
+        <item>Ham</item>
+        <item>Hazelnut</item>
+        <item>Herbs</item>
+        <item>Honey</item>
+        <item>Hummus</item>
+        <item>Jam</item>
+        <item>Jelly</item>
+        <item>Kale</item>
+        <item>Kidney beans</item>
+        <item>Kiwi</item>
+        <item>Ketchup</item>
+        <item>Lamb</item>
+        <item>Lard</item>
+        <item>Lemon</item>
+        <item>Lemon juice</item>
+        <item>Lentils</item>
+        <item>Lime</item>
+        <item>Lettuce</item>
+        <item>Liquorice</item>
+        <item>Lobster</item>
+        <item>Macadamia</item>
+        <item>Mandarin</item>
+        <item>Mango</item>
+        <item>Maple syrup</item>
+        <item>Margarine</item>
+        <item>Marmalade</item>
+        <item>Marshmallow</item>
+        <item>Marzipan</item>
+        <item>Mascarpone</item>
+        <item>Mayonnaise</item>
+        <item>Melon</item>
+        <item>Melon seeds</item>
+        <item>Milk</item>
+        <item>Milk chocolate</item>
+        <item>Mince</item>
+        <item>Mint</item>
+        <item>Mozzarella</item>
+        <item>Muesli</item>
+        <item>Mushroom</item>
+        <item>Mustard</item>
+        <item>Nachos</item>
+        <item>Noodle</item>
+        <item>Oatmeal</item>
+        <item>Oil</item>
+        <item>Olive</item>
+        <item>Olive oil</item>
+        <item>Onion</item>
+        <item>Orange</item>
+        <item>Oregano</item>
+        <item>Oyster</item>
+        <item>Papaya</item>
+        <item>Paprika</item>
+        <item>Parmesan</item>
+        <item>Parsley</item>
+        <item>Parsnip</item>
+        <item>Passion fruit</item>
+        <item>Pasta</item>
+        <item>Peach</item>
+        <item>Peanut butter</item>
+        <item>Pear</item>
+        <item>Peas</item>
+        <item>Pepper</item>
+        <item>Pepperoni</item>
+        <item>Pesto</item>
+        <item>Pickle</item>
+        <item>Pineapple</item>
+        <item>Pistachio</item>
+        <item>Plum</item>
+        <item>Poppy seeds</item>
+        <item>Pork</item>
+        <item>Potato</item>
+        <item>Pumpkin</item>
+        <item>Quince</item>
+        <item>Rabbit</item>
+        <item>Radish</item>
+        <item>Rainbow trout</item>
+        <item>Raisins</item>
+        <item>Raspberry</item>
+        <item>Red wine</item>
+        <item>Rice</item>
+        <item>Ricotta</item>
+        <item>Rosemary</item>
+        <item>Saffron</item>
+        <item>Sage</item>
+        <item>Salami</item>
+        <item>Salmon</item>
+        <item>Salt</item>
+        <item>Sardine</item>
+        <item>Sesame oil</item>
+        <item>Sesame seeds</item>
+        <item>Sour cream</item>
+        <item>Soy sauce</item>
+        <item>Soya beans</item>
+        <item>Spaghetti</item>
+        <item>Spices</item>
+        <item>Spinach</item>
+        <item>Squash</item>
+        <item>Squid</item>
+        <item>Star anise</item>
+        <item>Steak</item>
+        <item>Strawberry</item>
+        <item>Strawberry jam</item>
+        <item>Sugar</item>
+        <item>Sunflower oil</item>
+        <item>Sunflower seed</item>
+        <item>Sweet potato</item>
+        <item>Tabasco</item>
+        <item>Taco</item>
+        <item>Tarragon</item>
+        <item>Tempura</item>
+        <item>Tequila</item>
+        <item>Thyme</item>
+        <item>Tuna</item>
+        <item>Tofu</item>
+        <item>Tomato</item>
+        <item>Trout</item>
+        <item>Turkey</item>
+        <item>Turnip</item>
+        <item>Vanilla extract</item>
+        <item>Vegetable oil</item>
+        <item>Vinegar</item>
+        <item>Vodka</item>
+        <item>Walnut</item>
+        <item>Wasabi</item>
+        <item>Watermelon</item>
+        <item>White wine</item>
+        <item>Wine</item>
+        <item>Yam</item>
+        <item>Yeast</item>
+        <item>Yogurt</item>
+
     </string-array>
 </resources>
