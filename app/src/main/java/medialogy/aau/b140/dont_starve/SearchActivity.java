@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -33,6 +34,13 @@ public class SearchActivity extends AppCompatActivity {
         extras = getIntent().getExtras();
         searchIngredients = extras.getString(Intent.EXTRA_TEXT).replace(" ", "").replace("[", "").replace("]", "").split(",");
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toMainScreen();
+            }
+        });
 
         lv = findViewById(R.id.search_result_ListView);
 
@@ -64,6 +72,8 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void toMainScreen(){
-
+        Intent toMain = new Intent(getApplicationContext(), MainActivity.class);
+        toMain.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivityIfNeeded(toMain, 0);
     }
 }

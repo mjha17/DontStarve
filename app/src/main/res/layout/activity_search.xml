@@ -28,6 +28,14 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:tint="@color/bigTextColor"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
         </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
