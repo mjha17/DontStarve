@@ -96,8 +96,8 @@ public class CalendarActivity extends AppCompatActivity {
         return selectedDate;
     }
 
-    public void setSelectedDate(Calendar currentDate) {
-        this.selectedDate = currentDate;
+    public void setSelectedDate(Calendar selectedDate) {
+        this.selectedDate = selectedDate;
     }
 
     @Override
