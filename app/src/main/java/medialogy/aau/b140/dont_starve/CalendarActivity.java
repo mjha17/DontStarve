@@ -1,5 +1,7 @@
 package medialogy.aau.b140.dont_starve;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
@@ -14,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Date;
@@ -52,6 +55,13 @@ public class CalendarActivity extends AppCompatActivity {
         currentDay = Calendar.getInstance();
         selectedDay = Calendar.getInstance();
 
+        ImageView backButton = (ImageView) findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toMainScreen();
+            }
+        });
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
@@ -174,6 +184,8 @@ public class CalendarActivity extends AppCompatActivity {
 
     }
     private void toMainScreen(){
-
+        Intent toMain = new Intent(getApplicationContext(), MainActivity.class);
+        toMain.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivityIfNeeded(toMain, 0);
     }
 }
