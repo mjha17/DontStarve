@@ -10,24 +10,26 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import java.time.chrono.ChronoLocalDate;
+
 public class MonthlyTab extends Fragment {
-    public int day;
+
+    private CalendarView calendarView;
+
+    public MonthlyTab(){}
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.tab_monthly, container, false);
 
-        CalendarView calendarView = v.findViewById(R.id.calendarView);
-
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                System.out.println("Date: " + i2);
-                day = i2;
-            }
-        });
+        calendarView = v.findViewById(R.id.calendarView);
 
         return v;
+    }
+
+    public CalendarView getCalendarView() {
+        return calendarView;
     }
 }
