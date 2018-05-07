@@ -58,14 +58,6 @@ public class CalendarActivity extends AppCompatActivity {
         mt = new MonthlyTab();
         dt = new DailyTab();
 
-        mt.getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
-                selectedDate = new GregorianCalendar(year,month,dayOfMonth);
-                updateDailyView();
-            }
-        });
-
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,6 +120,14 @@ public class CalendarActivity extends AppCompatActivity {
 
         public SectionsPagerAdapter(FragmentManager fm, CalendarActivity calendarActivity ) {
             super(fm);
+
+            calendarActivity.getMt().getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+                @Override
+                public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+                    selectedDate = new GregorianCalendar(year,month,dayOfMonth);
+                    updateDailyView();
+                }
+            });
         }
 
         @Override
