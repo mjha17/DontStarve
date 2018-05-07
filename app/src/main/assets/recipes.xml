@@ -172,4 +172,49 @@
         <Ingredient Name="coriander"/>
 
     </Recipe>
+    <Recipe
+        Name="Roast potatoes with paprika"
+        Desc="Make roast potatoes that are tasty and healthy. Smoked paprika adds flavour and we have a top tip for a crispy finish. Ideal for Sunday lunch, or Christmas Day."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/10/paprika-potatoes.jpg">
+
+
+        <Ingredient Name="Potato"/>
+        <Ingredient Name="Paprika"/>
+        <Ingredient Name="Olive oil"/>
+
+    </Recipe>
+    <Recipe
+        Name="Pumpkin pie"
+        Desc="Fill a sweet shortcrust pastry tart case with lightly spiced squash to make a traditional American treat."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--801482_11.jpg">
+
+
+        <Ingredient Name="Pumpkin"/>
+        <Ingredient Name="Sweet shortcrust pastry"/>
+        <Ingredient Name="Flour"/>
+        <Ingredient Name="Sugar"/>
+        <Ingredient Name="Salt"/>
+        <Ingredient Name="Nutmeg"/>
+        <Ingredient Name="Cinnamon"/>
+        <Ingredient Name="Egg"/>
+        <Ingredient Name="Butter"/>
+        <Ingredient Name="Milk"/>
+
+    </Recipe>
+    <Recipe
+        Name="Salmon &amp; sour cream potato"
+        Desc="These creamy but fresh mini baked potatoes taste decadent but are simple to make."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1263_11.jpg">
+
+
+        <Ingredient Name="Potato"/>
+        <Ingredient Name="Salmon"/>
+        <Ingredient Name="Horseradish"/>
+        <Ingredient Name="Chive"/>
+        <Ingredient Name="Onion"/>
+        <Ingredient Name="Sour cream"/>
+        <Ingredient Name="Lemon juice"/>
+        <Ingredient Name="Olive oil"/>
+
+    </Recipe>
 </Recipes>
