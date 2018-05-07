@@ -105,21 +105,6 @@
 
     </Recipe>
     <Recipe
-        Name="American blueberry pancakes"
-        Desc="Light, fluffy and fruity, these pancakes are a US classic. Serve them stacked high with syrup and extra fruit."
-        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/user-collections/my-colelction-image/2015/12/recipe-image-legacy-id--1273456_8.jpg">
-
-        <Ingredient Name="flour"/>
-        <Ingredient Name="baking powder"/>
-        <Ingredient Name="egg"/>
-        <Ingredient Name="milk"/>
-        <Ingredient Name="butter"/>
-        <Ingredient Name="blueberry"/>
-        <Ingredient Name="oil"/>
-        <Ingredient Name="maple syrup"/>
-
-    </Recipe>
-    <Recipe
         Name="Pizza"
         Desc="Take your senses on a trip to Italy with this authentic pizza Margherita."
         imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--2043_12.jpg">
