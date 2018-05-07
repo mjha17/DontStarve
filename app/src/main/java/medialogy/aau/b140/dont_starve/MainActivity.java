@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void toCalendar(){
         Intent toCalendar = new Intent(getApplicationContext(), CalendarActivity.class);
-        startActivity(toCalendar);
+        toCalendar.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivityIfNeeded(toCalendar, 0);
     }
 }
