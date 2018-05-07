@@ -56,7 +56,9 @@ public class CalendarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calendar);
 
         mt = new MonthlyTab();
+        mt.setCalendarActivity(this);
         dt = new DailyTab();
+        dt.setCalendarActivity(this);
 
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
