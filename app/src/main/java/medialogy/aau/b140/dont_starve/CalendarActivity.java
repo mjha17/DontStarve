@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import java.util.Date;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class CalendarActivity extends AppCompatActivity {
 
@@ -35,12 +36,13 @@ public class CalendarActivity extends AppCompatActivity {
      */
 
     private Calendar[] plannedDays;
-    private Calendar currentDay;
-    private Calendar selectedDay;
     private RecipeListItem[] recipes;
 
-    private CalendarView calendarView;
+    private Calendar currentDate;
+    private Calendar selectedDate;
 
+    private MonthlyTab mt;
+    private DailyTab dt;
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
@@ -53,8 +55,8 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
-        currentDay = Calendar.getInstance();
-        selectedDay = Calendar.getInstance();
+        mt = new MonthlyTab();
+        dt = new DailyTab();
 
         ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -63,12 +65,10 @@ public class CalendarActivity extends AppCompatActivity {
                 toMainScreen();
             }
         });
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this);
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -80,6 +80,13 @@ public class CalendarActivity extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
     }
 
+    public MonthlyTab getMt() {
+        return mt;
+    }
+
+    public DailyTab getDt() {
+        return dt;
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -104,59 +111,32 @@ public class CalendarActivity extends AppCompatActivity {
     }
 
     /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-        /**
-         * The fragment argument representing the section number for this
-         * fragment.
-         */
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-        public PlaceholderFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_calendar, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
-        }
-    }
-
-    /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        CalendarActivity calendarActivity;
+
+        public SectionsPagerAdapter(FragmentManager fm, CalendarActivity calendarActivity ) {
             super(fm);
+
+            calendarActivity.getMt().getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+                @Override
+                public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
+                    selectedDate = new GregorianCalendar(year,month,dayOfMonth);
+                    updateDailyView();
+                }
+            });
         }
 
         @Override
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    DailyTab dt = new DailyTab();
-                    return dt;
+                    return calendarActivity.getDt();
                 case 1:
-                    MonthlyTab mt = new MonthlyTab();
-                    return mt;
+                    return calendarActivity.getMt();
             }
             return null;
         }
@@ -169,10 +149,8 @@ public class CalendarActivity extends AppCompatActivity {
     }
 
     private void updateDailyView(){
-        TextView textViewWeek = findViewById(R.id.weekday);
-        TextView textViewDate = findViewById(R.id.today_date);
-
-        textViewDate.setText(selectedDay.get(Calendar.DAY_OF_MONTH));
+        dt.getWeekday().setText(selectedDate.get(Calendar.DAY_OF_WEEK));
+        dt.getDayOfMonth().setText(selectedDate.get(Calendar.MONTH) + selectedDate.get(Calendar.DATE));
     }
 
     private void getRecipes(){
