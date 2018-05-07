@@ -16,7 +16,7 @@
         android:elevation="3dp"
 
         android:padding="4dp"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
 
         android:background="@drawable/round"
         android:backgroundTint="@color/negativeAction"
@@ -28,6 +28,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:layout_gravity="center_vertical"
             android:orientation="horizontal"
             android:background="@drawable/rounded_corners">
 
@@ -36,8 +38,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
+            android:layout_margin="6dp"
 
             android:elevation="1dp"
 
@@ -48,16 +49,15 @@
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
 
-            android:paddingVertical="8dp"
             android:paddingLeft="8dp"
             android:textSize="20dp"
 
-            android:layout_weight="1">
-        </TextView>
+            android:layout_weight="1"/>
 
             <ImageButton
-                android:layout_width="?android:attr/actionBarSize"
-                android:layout_height="?android:attr/actionBarSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:src="@drawable/ic_draggable"
                 android:layout_gravity="center_vertical"
                 android:tint="@color/secondaryTextColor"

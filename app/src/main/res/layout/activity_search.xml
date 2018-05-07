@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:tint="@color/bigTextColor"
-                android:src="@drawable/ic_arrow_back_black_24dp" />
+                android:src="@drawable/ic_arrow_back_black_32dp" />
 
         </android.support.v7.widget.Toolbar>
 

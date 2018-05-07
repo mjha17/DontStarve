@@ -12,7 +12,7 @@ public class RecipeListItem implements Comparable<RecipeListItem> {
 
     private int compatibility;
 
-    RecipeListItem(String name, String desc, String[] ingredients, URL imageSrc){
+    public RecipeListItem(String name, String desc, String[] ingredients, URL imageSrc){
         this.name = name;
         this.desc = desc;
 
@@ -20,6 +20,10 @@ public class RecipeListItem implements Comparable<RecipeListItem> {
         this.imageSrc = imageSrc;
 
         this.compatibility = 2;
+    }
+
+    public RecipeListItem(String name){
+        this(name, null, null, null);
     }
 
     public String getName() {

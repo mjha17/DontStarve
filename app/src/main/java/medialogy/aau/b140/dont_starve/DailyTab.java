@@ -6,25 +6,38 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class DailyTab extends Fragment {
 
     private View origin;
+    private ListView recipeList;
     private TextView weekday;
     private TextView dayOfMonth;
 
-    CalendarActivity calendarActivity;
+    private dailyViewAdapter dailyViewAdapter;
+
+    private CalendarActivity calendarActivity;
 
     public DailyTab(){}
 
     public void setCalendarActivity(CalendarActivity calendarActivity) {
         this.calendarActivity = calendarActivity;
+    }
+
+    public CalendarActivity getCalendarActivity() {
+        return calendarActivity;
+    }
+
+    public dailyViewAdapter getAdapter() {
+        return dailyViewAdapter;
     }
 
     @Nullable
@@ -35,6 +48,10 @@ public class DailyTab extends Fragment {
 
         weekday = origin.findViewById(R.id.weekday);
         dayOfMonth = origin.findViewById(R.id.today_date);
+
+        recipeList = origin.findViewById(R.id.dailyOverview);
+        dailyViewAdapter = new dailyViewAdapter(calendarActivity.getTodaysRecipes(), this);
+        recipeList.setAdapter(dailyViewAdapter);
 
         return origin;
     }
@@ -48,8 +65,8 @@ public class DailyTab extends Fragment {
 
     public void updateView(){
         if(weekday != null && dayOfMonth != null) {
-            weekday.setText(new SimpleDateFormat("E").format(calendarActivity.getSelectedDate().getTime()));
-            dayOfMonth.setText(new SimpleDateFormat("M d").format(calendarActivity.getSelectedDate().getTime()));
+            weekday.setText(new SimpleDateFormat("EEEE", Locale.ENGLISH).format(calendarActivity.getSelectedDate().getTime()));
+            dayOfMonth.setText(new SimpleDateFormat("MMMM d", Locale.ENGLISH).format(calendarActivity.getSelectedDate().getTime()));
         }
     }
 

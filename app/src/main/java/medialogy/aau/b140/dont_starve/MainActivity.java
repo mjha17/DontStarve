@@ -4,11 +4,9 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -18,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     ingredientListAdpter mainScreenAdapter;
     ArrayAdapter<String> autoCompleteAdapter;
-    ArrayList<String> Ingredients = new ArrayList<String>();
+    ArrayList<String> ingredients = new ArrayList<String>();
 
     Button searchButton;
     ImageButton calendarButton, addButton;
@@ -42,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
         input.setAdapter(autoCompleteAdapter);
 
         addedIngredients = findViewById(R.id.addedIngredients);
-        mainScreenAdapter = new ingredientListAdpter(Ingredients, getApplicationContext());
+        mainScreenAdapter = new ingredientListAdpter(ingredients, this);
         addedIngredients.setAdapter(mainScreenAdapter);
 
         //Demo ingredient
         //!! - SHOULD BE REMOVED AT A LATER POINT !!
-        Ingredients.add("asparagus");
+        ingredients.add("asparagus");
 
         //What happend when the 'search' button is clicked
         searchButton.setOnClickListener(new View.OnClickListener() {
@@ -72,14 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 addIngredient();
             }
         });
-
-        addedIngredients.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Ingredients.remove(i);
-                mainScreenAdapter.notifyDataSetChanged();
-            }
-        });
     }
 
     private void addIngredient(){
@@ -88,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(ingredient.equals("") || ingredient == null) return;
 
-        Ingredients.add(ingredient);
+        ingredients.add(ingredient);
         mainScreenAdapter.notifyDataSetChanged();
 
         input.setText("");
@@ -96,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void toSearch(){
         Intent toSearch = new Intent(getApplicationContext(), SearchActivity.class);
-        toSearch.putExtra(Intent.EXTRA_TEXT, Ingredients.toString());
+        toSearch.putExtra(Intent.EXTRA_TEXT, ingredients.toString());
         startActivity(toSearch);
     }
 

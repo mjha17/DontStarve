@@ -5,34 +5,33 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by majoh on 07-05-2018.
- */
-
 public class dailyViewAdapter extends BaseAdapter{
     private ArrayList<RecipeListItem> recipes;
 
-    private Context ctx;
+    private DailyTab dt;
     private LayoutInflater inflater;
 
-    public dailyViewAdapter ( ArrayList<String> ingredients, Context ctx){
-        this.ingredients = ingredients;
-        this.ctx = ctx;
-        inflater = LayoutInflater.from(ctx);
+    public dailyViewAdapter ( ArrayList<RecipeListItem> recipes, DailyTab dt){
+        this.recipes = recipes;
+        this.dt = dt;
+        inflater = LayoutInflater.from(dt.getCalendarActivity().getApplicationContext());
+
+
     }
 
     @Override
     public int getCount() {
-        return ingredients.size();
+        return recipes.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return ingredients.get(i);
+        return recipes.get(i);
     }
 
     @Override
@@ -45,11 +44,25 @@ public class dailyViewAdapter extends BaseAdapter{
         View v =  view;
 
         if(v == null){
-            v = inflater.inflate(R.layout.ingredients_list_items, null);
+            v = inflater.inflate(R.layout.daily_listitem, null);
         }
 
-        TextView ingredientName = v.findViewById(R.id.ingredient_item);
-        ingredientName.setText(ingredients.get(i));
+        final RecipeListItem recipe = recipes.get(i);
+
+        TextView ingredientName = v.findViewById(R.id.recipe_item);
+        ImageButton delete = v.findViewById(R.id.recipe_delete);
+
+        delete.setVisibility(dt.getCalendarActivity().getEditing() ? View.VISIBLE : View.GONE);
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                recipes.remove(recipe);
+                dt.getAdapter().notifyDataSetChanged();
+            }
+        });
+
+        ingredientName.setText(recipe.getName());
         return v;
     }
 }

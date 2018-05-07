@@ -20,6 +20,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -36,7 +37,7 @@ public class CalendarActivity extends AppCompatActivity {
      */
 
     private Calendar[] plannedDays;
-    private RecipeListItem[] recipes;
+    private ArrayList<RecipeListItem> todaysRecipes = new ArrayList<>();
 
     private Calendar currentDate;
     private Calendar selectedDate;
@@ -44,6 +45,8 @@ public class CalendarActivity extends AppCompatActivity {
     private MonthlyTab mt;
     private DailyTab dt;
     private SectionsPagerAdapter mSectionsPagerAdapter;
+
+    private boolean editing = false;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -57,16 +60,32 @@ public class CalendarActivity extends AppCompatActivity {
 
         selectedDate = Calendar.getInstance();
 
+        todaysRecipes.add(new RecipeListItem("Test"));
+        todaysRecipes.add(new RecipeListItem("Things"));
+        todaysRecipes.add(new RecipeListItem("To"));
+        todaysRecipes.add(new RecipeListItem("Put"));
+        todaysRecipes.add(new RecipeListItem("In"));
+        todaysRecipes.add(new RecipeListItem("List"));
+
         mt = new MonthlyTab();
         mt.setCalendarActivity(this);
         dt = new DailyTab();
         dt.setCalendarActivity(this);
 
         ImageButton backButton = findViewById(R.id.backButton);
+        ImageButton editButton = findViewById(R.id.editButton);
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 toMainScreen();
+            }
+        });
+        editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editing = !editing;
+                dt.getAdapter().notifyDataSetChanged();
             }
         });
 
@@ -98,6 +117,14 @@ public class CalendarActivity extends AppCompatActivity {
 
     public void setSelectedDate(Calendar selectedDate) {
         this.selectedDate = selectedDate;
+    }
+
+    public ArrayList<RecipeListItem> getTodaysRecipes() {
+        return todaysRecipes;
+    }
+
+    public boolean getEditing(){
+        return editing;
     }
 
     @Override
