@@ -128,6 +128,8 @@ public class CalendarActivity extends AppCompatActivity {
 
         public SectionsPagerAdapter(FragmentManager fm, CalendarActivity calendarActivity ) {
             super(fm);
+
+            this.calendarActivity = calendarActivity;
         }
 
         @Override

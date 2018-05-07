@@ -42,8 +42,10 @@ public class DailyTab extends Fragment {
     public void onResume() {
         super.onResume();
 
-        weekday.setText(calendarActivity.getSelectedDate().get(Calendar.DAY_OF_WEEK));
-        dayOfMonth.setText(calendarActivity.getSelectedDate().get(Calendar.MONTH) + calendarActivity.getSelectedDate().get(Calendar.DATE));
+        if(weekday != null && dayOfMonth != null) {
+            weekday.setText(calendarActivity.getSelectedDate().get(Calendar.DAY_OF_WEEK));
+            dayOfMonth.setText(calendarActivity.getSelectedDate().get(Calendar.MONTH) + calendarActivity.getSelectedDate().get(Calendar.DATE));
+        }
     }
 
     public TextView getWeekday() {
