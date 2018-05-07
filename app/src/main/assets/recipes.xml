@@ -41,4 +41,71 @@
         <Ingredient Name="pepper"/>
 
     </Recipe>
+    <Recipe
+        Name="Chocolate brownies"
+        Desc="A foolproof brownie recipe for a squidgy chocolate bake. Watch our recipe video to help you get a perfect traybake every time."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1001464_11.jpg">
+
+
+        <Ingredient Name="unsalted butter"/>
+        <Ingredient Name="dark chocolate"/>
+        <Ingredient Name="flour"/>
+        <Ingredient Name="cocoa powder"/>
+        <Ingredient Name="white chocolate"/>
+        <Ingredient Name="milk chocolate"/>
+        <Ingredient Name="eggs"/>
+        <Ingredient Name="sugar"/>
+
+    </Recipe>
+    <Recipe
+        Name="Chicken gyros"
+        Desc="Marinate the chicken for these Greek-style spiced kebabs as long as possible to soak up all the flavour and make it really tender. Serve with warm bread, salad and tzatziki"
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2016/06/chicken-gyros.jpg">
+
+
+        <Ingredient Name="olive oil"/>
+        <Ingredient Name="dried oregano"/>
+        <Ingredient Name="dried mint"/>
+        <Ingredient Name="ground cumin"/>
+        <Ingredient Name="coriander"/>
+        <Ingredient Name="paprika"/>
+        <Ingredient Name="cinnamon"/>
+        <Ingredient Name="lemon"/>
+        <Ingredient Name="garlic"/>
+        <Ingredient Name="flour"/>
+        <Ingredient Name="yeast"/>
+        <Ingredient Name="lettuce"/>
+        <Ingredient Name="tomatoes"/>
+        <Ingredient Name="red onion"/>
+
+    </Recipe>
+    <Recipe
+        Name="Pulled pork"
+        Desc="The easiest pulled pork recipe you'll ever use. No tricky measurements involved, minimal ingredients and a mouth-watering smoky barbecue result"
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/03/pulled-pork.jpg">
+
+
+        <Ingredient Name="pork"/>
+        <Ingredient Name="paprika"/>
+        <Ingredient Name="cumin"/>
+        <Ingredient Name="pepper"/>
+        <Ingredient Name="sugar"/>
+        <Ingredient Name="salt"/>
+        <Ingredient Name="cider"/>
+        <Ingredient Name="barbecue sauce"/>
+        <Ingredient Name="white rolls"/>
+
+    </Recipe>
+    <Recipe
+        Name="Tangy tomato relish"
+        Desc="Add freshness to a barbecue or Indian meal with a relish that is packed with tomatoes, onion and coriander – and it can be made a few days ahead"
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/05/tangy-tomato-relish.jpg">
+
+
+        <Ingredient Name="tomatoes"/>
+        <Ingredient Name="onion"/>
+        <Ingredient Name="ketchup"/>
+        <Ingredient Name="coriander"/>
+
+    </Recipe>
 </Recipes>
