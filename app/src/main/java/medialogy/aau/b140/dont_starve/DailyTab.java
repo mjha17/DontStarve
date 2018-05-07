@@ -10,13 +10,21 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.Calendar;
+
 public class DailyTab extends Fragment {
 
     private View origin;
     private TextView weekday;
     private TextView dayOfMonth;
 
+    CalendarActivity calendarActivity;
+
     public DailyTab(){}
+
+    public void setCalendarActivity(CalendarActivity calendarActivity) {
+        this.calendarActivity = calendarActivity;
+    }
 
     @Nullable
     @Override
@@ -28,6 +36,14 @@ public class DailyTab extends Fragment {
         dayOfMonth = origin.findViewById(R.id.today_date);
 
         return origin;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        weekday.setText(calendarActivity.getSelectedDate().get(Calendar.DAY_OF_WEEK));
+        dayOfMonth.setText(calendarActivity.getSelectedDate().get(Calendar.MONTH) + calendarActivity.getSelectedDate().get(Calendar.DATE));
     }
 
     public TextView getWeekday() {

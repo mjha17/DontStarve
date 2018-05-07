@@ -88,6 +88,14 @@ public class CalendarActivity extends AppCompatActivity {
         return dt;
     }
 
+    public Calendar getSelectedDate() {
+        return currentDate;
+    }
+
+    public void setSelectedDate(Calendar currentDate) {
+        this.currentDate = currentDate;
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -120,14 +128,6 @@ public class CalendarActivity extends AppCompatActivity {
 
         public SectionsPagerAdapter(FragmentManager fm, CalendarActivity calendarActivity ) {
             super(fm);
-
-            calendarActivity.getMt().getCalendarView().setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-                @Override
-                public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
-                    selectedDate = new GregorianCalendar(year,month,dayOfMonth);
-                    updateDailyView();
-                }
-            });
         }
 
         @Override
@@ -146,11 +146,6 @@ public class CalendarActivity extends AppCompatActivity {
             // Show 2 total pages.
             return 2;
         }
-    }
-
-    private void updateDailyView(){
-        dt.getWeekday().setText(selectedDate.get(Calendar.DAY_OF_WEEK));
-        dt.getDayOfMonth().setText(selectedDate.get(Calendar.MONTH) + selectedDate.get(Calendar.DATE));
     }
 
     private void getRecipes(){
