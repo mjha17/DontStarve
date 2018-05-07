@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class DailyTab extends Fragment {
@@ -43,8 +44,8 @@ public class DailyTab extends Fragment {
         super.onResume();
 
         if(weekday != null && dayOfMonth != null) {
-            weekday.setText(Integer.toString(calendarActivity.getSelectedDate().get(Calendar.DAY_OF_WEEK)));
-            dayOfMonth.setText(Integer.toString(calendarActivity.getSelectedDate().get(Calendar.MONTH)) + Integer.toString(calendarActivity.getSelectedDate().get(Calendar.DATE)));
+            weekday.setText(new SimpleDateFormat("E").format(calendarActivity.getSelectedDate()));
+            dayOfMonth.setText(new SimpleDateFormat("M d").format(calendarActivity.getSelectedDate()));
         }
     }
 
