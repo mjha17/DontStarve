@@ -16,15 +16,12 @@
         <item>Beetroot</item>
         <item>Beans</item>
         <item>Cayenne Pepper</item>
-        <item>Pepper</item>
         <item>Coconut Cream</item>
         <item>Coconut Milk</item>
         <item>Cos Lettuce</item>
         <item>Dill</item>
         <item>Rhubarb</item>
         <item>Mustard Seeds</item>
-        <item>Mustard</item>
-        <item>Parsnip</item>
         <item>Stewing Lamb</item>
         <item>Acorn Squash</item>
         <item>Ale</item>
@@ -46,7 +43,6 @@
         <item>Baguette</item>
         <item>Baking Powder</item>
         <item>Balsamic Vinegar</item>
-        <item>Vinegar</item>
         <item>Banana</item>
         <item>Barbecue Sauce</item>
         <item>Barley</item>
@@ -94,7 +90,7 @@
         <item>Chicken wings</item>
         <item>Chilli</item>
         <item>Chives</item>
-        <item>Choccolate</item>
+        <item>Chocolate</item>
         <item>Ciabatta</item>
         <item>Cinnamon</item>
         <item>Clementine</item>
@@ -143,7 +139,7 @@
         <item>Lettuce</item>
         <item>Liquorice</item>
         <item>Lobster</item>
-        <item>Macademia</item>
+        <item>Macadamia</item>
         <item>Mandarin</item>
         <item>Mango</item>
         <item>Maple syrup</item>
@@ -215,7 +211,7 @@
         <item>Sesame seeds</item>
         <item>Sour cream</item>
         <item>Soy sauce</item>
-        <item>Soya beens</item>
+        <item>Soya beans</item>
         <item>Spaghetti</item>
         <item>Spices</item>
         <item>Spinach</item>
@@ -252,7 +248,7 @@
         <item>Wine</item>
         <item>Yam</item>
         <item>Yeast</item>
-        <item>Yoghurt</item>
+        <item>Yogurt</item>
 
     </string-array>
 </resources>
