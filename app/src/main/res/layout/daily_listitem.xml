@@ -31,7 +31,8 @@
             android:layout_margin="4dp"
             android:layout_gravity="center_vertical"
             android:orientation="horizontal"
-            android:background="@drawable/rounded_corners">
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/secondaryTextColor">
 
             <TextView
             android:id="@+id/recipe_item"
@@ -60,7 +61,8 @@
                 android:padding="5dp"
                 android:src="@drawable/ic_draggable"
                 android:layout_gravity="center_vertical"
-                android:tint="@color/secondaryTextColor"
+                android:tint="@color/darkGray"
+                android:elevation="5dp"
                 android:background="@android:color/transparent"/>
 
     </LinearLayout>

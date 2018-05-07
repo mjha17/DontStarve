@@ -79,7 +79,9 @@ public class RecipeListItem implements Comparable<RecipeListItem> {
 
         if (searchArray.length <= matches) {
             this.compatibility = 1;
-        } else {
+        } else if (matches <= 0) {
+            this.compatibility = 3;
+        }else{
             this.compatibility = 2;
         }
     }

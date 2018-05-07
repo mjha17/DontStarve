@@ -10,6 +10,7 @@
     <color name="bigTextColor">#FCF4EF</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#aaaaaa</color>
+    <color name="darkGray">#888888</color>
 
     <color name="negativeAction">#DB3939</color>
     <color name="neutralAction">#F49B00</color>

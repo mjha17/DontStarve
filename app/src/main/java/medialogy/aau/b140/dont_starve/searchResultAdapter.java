@@ -1,8 +1,10 @@
 package medialogy.aau.b140.dont_starve;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -74,6 +76,21 @@ public class searchResultAdapter extends BaseAdapter {
             }
         });
 
+        matchIndicator.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                StringBuilder builder = new StringBuilder();
+
+                for(String s : rli.getIngredients()){
+                    builder.append(s);
+                    builder.append(", ");
+                }
+
+                Snackbar.make(searchActivity.lv, builder.toString(), Snackbar.LENGTH_LONG).show();
+                return true;
+            }
+        });
+
         //Sets headline and descrition of the current list item
         headline.setText(rli.getName());
         description.setText(rli.getDesc());
@@ -92,6 +109,10 @@ public class searchResultAdapter extends BaseAdapter {
             case 2:
                 matchIndicator.setImageResource(R.drawable.ic_compat_excl);
                 matchIndicator.setColorFilter(ContextCompat.getColor(v.getContext(), R.color.neutralAction), android.graphics.PorterDuff.Mode.SRC_IN);
+                break;
+            case 3:
+                matchIndicator.setImageResource(R.drawable.ic_compat_cros);
+                matchIndicator.setColorFilter(ContextCompat.getColor(v.getContext(), R.color.negativeAction), android.graphics.PorterDuff.Mode.SRC_IN);
                 break;
         }
 
