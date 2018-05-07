@@ -55,6 +55,8 @@ public class CalendarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
 
+        selectedDate = Calendar.getInstance();
+
         mt = new MonthlyTab();
         mt.setCalendarActivity(this);
         dt = new DailyTab();
@@ -91,11 +93,11 @@ public class CalendarActivity extends AppCompatActivity {
     }
 
     public Calendar getSelectedDate() {
-        return currentDate;
+        return selectedDate;
     }
 
     public void setSelectedDate(Calendar currentDate) {
-        this.currentDate = currentDate;
+        this.selectedDate = currentDate;
     }
 
     @Override
