@@ -41,4 +41,20 @@
         <Ingredient Name="pepper"/>
 
     </Recipe>
+    <Recipe
+        Name="Chocolate brownies"
+        Desc="A foolproof brownie recipe for a squidgy chocolate bake. Watch our recipe video to help you get a perfect traybake every time."
+        imgSrc="https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe_images/recipe-image-legacy-id--1001464_11.jpg">
+
+
+        <Ingredient Name="unsalted butter"/>
+        <Ingredient Name="dark chocolate"/>
+        <Ingredient Name="flour"/>
+        <Ingredient Name="cocoa powder"/>
+        <Ingredient Name="white chocolate"/>
+        <Ingredient Name="milk chocolate"/>
+        <Ingredient Name="eggs"/>
+        <Ingredient Name="sugar"/>
+
+    </Recipe>
 </Recipes>
