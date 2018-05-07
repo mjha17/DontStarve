@@ -37,6 +37,7 @@ public class MonthlyTab extends Fragment {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int dayOfMonth) {
                 calendarActivity.setSelectedDate(new GregorianCalendar(year, month, dayOfMonth));
+                calendarActivity.getDt().updateView();
             }
         });
 

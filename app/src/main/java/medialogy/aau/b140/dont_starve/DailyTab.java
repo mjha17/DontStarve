@@ -43,6 +43,10 @@ public class DailyTab extends Fragment {
     public void onResume() {
         super.onResume();
 
+        updateView();
+    }
+
+    public void updateView(){
         if(weekday != null && dayOfMonth != null) {
             weekday.setText(new SimpleDateFormat("E").format(calendarActivity.getSelectedDate().getTime()));
             dayOfMonth.setText(new SimpleDateFormat("M d").format(calendarActivity.getSelectedDate().getTime()));
