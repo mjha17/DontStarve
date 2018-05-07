@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,7 +56,7 @@ public class CalendarActivity extends AppCompatActivity {
         currentDay = Calendar.getInstance();
         selectedDay = Calendar.getInstance();
 
-        ImageView backButton = (ImageView) findViewById(R.id.backButton);
+        ImageButton backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

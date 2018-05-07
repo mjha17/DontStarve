@@ -31,13 +31,13 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/backButton"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:rotation="90"
-                android:adjustViewBounds="false"
-                app:srcCompat="@android:drawable/arrow_down_float" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:tint="@color/bigTextColor"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
 
         </android.support.v7.widget.Toolbar>
 
