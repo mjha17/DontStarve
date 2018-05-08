@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     ingredientListAdpter mainScreenAdapter;
     ArrayAdapter<String> autoCompleteAdapter;
     ArrayList<String> ingredients = new ArrayList<String>();
+    ArrayList<String> suggestions = new ArrayList<String>();
 
     Button searchButton;
     ImageButton calendarButton, addButton;
