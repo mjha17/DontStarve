@@ -14,7 +14,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ingredientListAdpter mainScreenAdapter;
+    ingredientListAdapter mainScreenIngredients;
+    suggestionListAdapter mainScreenSuggestions;
     ArrayAdapter<String> autoCompleteAdapter;
     ArrayList<String> ingredients = new ArrayList<String>();
     ArrayList<String> suggestions = new ArrayList<String>();
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton calendarButton, addButton;
     AutoCompleteTextView input;
     ListView addedIngredients;
+    ListView suggestedIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +43,17 @@ public class MainActivity extends AppCompatActivity {
         input.setAdapter(autoCompleteAdapter);
 
         addedIngredients = findViewById(R.id.addedIngredients);
-        mainScreenAdapter = new ingredientListAdpter(ingredients, this);
-        addedIngredients.setAdapter(mainScreenAdapter);
+        mainScreenIngredients = new ingredientListAdapter(ingredients, this);
+        addedIngredients.setAdapter(mainScreenIngredients);
+
+        suggestedIngredients = findViewById(R.id.suggested_ingredients);
+        mainScreenSuggestions = new suggestionListAdapter(suggestions, this);
+        suggestedIngredients.setAdapter(mainScreenSuggestions);
+
+        //Demo suggested ingredients
+        suggestions.add("Salt");
+        suggestions.add("Pork");
+        suggestions.add("Sour cream");
 
         //Demo ingredient
         //!! - SHOULD BE REMOVED AT A LATER POINT !!
@@ -82,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         if(ingredient.equals("") || ingredient == null) return;
 
         ingredients.add(ingredient);
-        mainScreenAdapter.notifyDataSetChanged();
+        mainScreenIngredients.notifyDataSetChanged();
 
         input.setText("");
     }

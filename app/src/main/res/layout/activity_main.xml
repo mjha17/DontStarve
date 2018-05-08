@@ -107,6 +107,7 @@
             android:layout_height="1dp"/>
 
         <ListView
+            android:id="@+id/suggested_ingredients"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginHorizontal="10dp"

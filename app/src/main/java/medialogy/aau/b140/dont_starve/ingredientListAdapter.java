@@ -9,13 +9,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ingredientListAdpter extends BaseAdapter {
+public class ingredientListAdapter extends BaseAdapter {
     private ArrayList<String> ingredients;
 
     private MainActivity mainActivity;
     private LayoutInflater inflater;
 
-    public ingredientListAdpter ( ArrayList<String> ingredients, MainActivity mainActivity){
+    public ingredientListAdapter(ArrayList<String> ingredients, MainActivity mainActivity){
         this.ingredients = ingredients;
         this.mainActivity = mainActivity;
         inflater = LayoutInflater.from(mainActivity.getApplicationContext());
@@ -51,7 +51,7 @@ public class ingredientListAdpter extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 mainActivity.ingredients.remove(ingredient);
-                mainActivity.mainScreenAdapter.notifyDataSetChanged();
+                mainActivity.mainScreenIngredients.notifyDataSetChanged();
             }
         });
 
