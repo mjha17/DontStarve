@@ -22,7 +22,7 @@
             android:textColor="@color/secondaryTextColor"
             android:text="Ingredient"
             android:background="@drawable/rounded_corners"
-            android:backgroundTint="@color/backgroundPrimaryColor"
+            android:backgroundTint="@android:color/white"
 
             android:gravity="center_vertical"
             android:layout_gravity="center_vertical"
