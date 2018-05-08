@@ -81,7 +81,7 @@
             android:layout_margin="4dp"
             android:elevation="2dp"
 
-            android:backgroundTint="@color/positiveAction"
+            android:backgroundTint="@color/darkGray"
             android:tint="@android:color/white"
             android:src="@drawable/ic_add_black_24dp" />
     </LinearLayout>
@@ -104,12 +104,13 @@
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:background="@color/secondaryTextColor"
-            android:layout_height="1dp"/>
+            android:layout_height="2dp"/>
 
         <ListView
             android:id="@+id/suggested_ingredients"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:divider="@null"
             android:layout_marginHorizontal="10dp"
             android:layout_weight="6"/>
 
