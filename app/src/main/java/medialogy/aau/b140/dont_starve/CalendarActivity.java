@@ -46,6 +46,9 @@ public class CalendarActivity extends AppCompatActivity {
     private DailyTab dt;
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
+    private ArrayList<String> chosenRecipes = new ArrayList<>();
+    private ArrayList<Date> recipeDates = new ArrayList<>();
+
     private boolean editing = false;
 
     /**
@@ -60,17 +63,20 @@ public class CalendarActivity extends AppCompatActivity {
 
         selectedDate = Calendar.getInstance();
 
+        /*
         todaysRecipes.add(new RecipeListItem("Test"));
         todaysRecipes.add(new RecipeListItem("Things"));
         todaysRecipes.add(new RecipeListItem("To"));
         todaysRecipes.add(new RecipeListItem("Put"));
         todaysRecipes.add(new RecipeListItem("In"));
         todaysRecipes.add(new RecipeListItem("List"));
+        */
 
         mt = new MonthlyTab();
         mt.setCalendarActivity(this);
         dt = new DailyTab();
         dt.setCalendarActivity(this);
+        dt.updateView();
 
         ImageButton backButton = findViewById(R.id.backButton);
         ImageButton editButton = findViewById(R.id.editButton);
@@ -88,7 +94,6 @@ public class CalendarActivity extends AppCompatActivity {
                 dt.getAdapter().notifyDataSetChanged();
             }
         });
-
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this);
@@ -101,8 +106,24 @@ public class CalendarActivity extends AppCompatActivity {
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
+        if (getIntent().getStringExtra("clickedRecipe") != null) {
+            todaysRecipes.add(new RecipeListItem("" + getIntent().getStringExtra("clickedRecipe")));
+            try{
+                dt.getAdapter().notifyDataSetChanged();
+            }
+            catch (NullPointerException e){
+                System.err.print(e);
+            }
+        }
     }
 
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        dt.updateView();
+    }
     public MonthlyTab getMt() {
         return mt;
     }

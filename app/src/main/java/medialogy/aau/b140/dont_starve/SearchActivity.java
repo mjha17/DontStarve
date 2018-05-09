@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -56,6 +57,10 @@ public class SearchActivity extends AppCompatActivity {
 
     public void toCalendar(RecipeListItem recipe){
         Toast.makeText(getApplicationContext(), recipe.getName(), Toast.LENGTH_LONG).show();
+        Intent gotoCalendar = new Intent(getApplicationContext(), CalendarActivity.class);
+        gotoCalendar.putExtra("clickedRecipe", recipe.getName());
+        gotoCalendar.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(gotoCalendar);
     }
 
     public void getSearchResults(RecipeListItem[] recipes){
